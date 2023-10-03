@@ -5,7 +5,6 @@ body {
     padding: 0;
 }
 
-
 h1 {
     background-color: #333;
     color: #fff;
@@ -13,31 +12,38 @@ h1 {
     text-align: center;
 }
 
-
-form {
+/* Estilo para el contenedor principal */
+.container {
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;
-    width: 300px;
-    margin: 20px auto;
-    text-align: center;
 }
- 
+
+/* Estilo para el input de tipo archivo */
 input[type="file"] {
     display: block;
     margin: 10px auto;
+    text-align: center; /* Centrar el texto dentro del input */
 }
 
-
-input[type="submit"] {
+/* Estilo para los botones */
+button {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 10px auto; /* Centrar los botones horizontalmente */
+    display: block;
+    width: fit-content; /* Ancho automático para adaptarse al contenido */
 }
 
-input[type="submit"]:hover {
-    background-color: #555;
+/* Estilo para el label */
+label {
+    display: block;
+    text-align: center;
 }

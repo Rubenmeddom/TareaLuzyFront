@@ -1,9 +1,9 @@
 <body>
+  <h1>Generar archivo CSV</h1>
+  <button (click)="generarCSV()">Generar CSV</button>
+  <br>
   <h1>Cargar archivo CSV</h1>
-  <form enctype="multipart/form-data" action="procesar_csv.php" method="POST">
-      <label for="csvFile">Selecciona un archivo CSV:</label>
-      <input type="file" name="csvFile" id="csvFile" accept=".csv" required>
-      <br>
-      <input type="submit" value="Cargar CSV">
-  </form>
+  <label for="csvFile">Selecciona un archivo CSV:</label>
+  <input type="file" (change)="onFileSelected($event)" name="csvFile" id="csvFile" accept=".csv" required>
+  <button (click)="parseCSV()">Cargar CSV</button>
 </body>

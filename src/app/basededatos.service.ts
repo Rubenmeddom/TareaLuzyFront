@@ -13,7 +13,11 @@ export class BasededatosService {
   Urlcontratos: string = "http://localhost:4200/contratos";
   Urlfacturas: string = "http://localhost:4200/facturas";
   Urlproductos: string = "http://localhost:4200/productos";
+
+
   constructor(private http: HttpClient) { }
+
+
   listarClientes(): Observable<Clientes[]> {
     return this.http.get<Clientes[]>(this.Urlclientes);
   }
@@ -29,22 +33,26 @@ export class BasededatosService {
 
 
 
-  agregarClientes(clientes: Clientes): Observable<any> {
-    const url = this.Urlclientes+"/agregarClientes";
+  agregarCliente(clientes: Clientes[]): Observable<any> {
+    const url = this.Urlclientes + "/agregarClientes";
     console.log(url, clientes);
     return this.http.post(url, clientes);
   }
-  agregarContratos(contratos: Contratos): Observable<any> {
+  
+  
+  
+
+  agregarContrato(contratos: Contratos): Observable<any> {
     const url = this.Urlcontratos+"/agregarContratos";
     console.log(url, contratos);
     return this.http.post(url, contratos);
   }
-  agregarFacturas(facturas: Facturas): Observable<any> {
+  agregarFactura(facturas: Facturas): Observable<any> {
     const url = this.Urlfacturas+"/agregarFacturas";
     console.log(url, facturas);
     return this.http.post(url, facturas);
   }
-  agregarProductos(productos: Productos): Observable<any> {
+  agregarProducto(productos: Productos): Observable<any> {
     const url = this.Urlproductos+"/agregarProductos";
     console.log(url, productos);
     return this.http.post(url, productos);
